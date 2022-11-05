@@ -5,6 +5,7 @@ public class App {
         Scanner input = new Scanner(System.in);
         System.out.print("Please, enter the amount to be calculated: ");
         double initialAmount = input.nextDouble();
+        input.close();
         double VAT_rate = 0;
         if (initialAmount > 0 && initialAmount < 1000)
             VAT_rate = 18;

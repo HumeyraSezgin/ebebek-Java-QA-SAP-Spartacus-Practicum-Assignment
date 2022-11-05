@@ -7,6 +7,8 @@ public class App {
         double height = input.nextDouble();
         System.out.print("Please enter your weight(kg): ");
         double weight = input.nextDouble();
+        input.close();
+        // calculate BMI
         double BMI = weight / Math.pow(height, 2);
         System.out.print("BMI Value: " + BMI);
     }

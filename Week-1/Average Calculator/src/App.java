@@ -15,9 +15,10 @@ public class App {
         history = input.nextInt();
         System.out.print("\nPlease, enter your music grade: ");
         music = input.nextInt();
-
+        input.close();
         int average = (math + physics + turkish + history + music) / 5;
         boolean result = average > 60;
+        // if higher than 60 pass the class
         System.out.println(result ? "Pass the class." : "Failed the class.");
     }
 }
