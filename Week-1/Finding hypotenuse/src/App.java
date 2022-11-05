@@ -7,11 +7,14 @@ public class App {
         double firstEdge = input.nextDouble();
         System.out.print("Please, enter the second edge length(m): ");
         double secondEdge = input.nextDouble();
+        System.out.print("Please, enter the third edge length(m): ");
+        double thirdEdge = input.nextDouble();
         input.close();
-        double hypotenuseLength = Math.sqrt(Math.pow(firstEdge, 2) + Math.pow(secondEdge, 2));
-        double perimeter = firstEdge + secondEdge + hypotenuseLength;
-        double area = firstEdge * secondEdge / 2;
-        System.out.println(
-                "Hypotenuse length(m): " + hypotenuseLength + "\nPerimeter(m): " + perimeter + "\nArea(m2): " + area);
+        double perimeter = firstEdge + secondEdge + thirdEdge;
+        double halfPerimeter = perimeter / 2;
+        double area = Math
+                .sqrt(halfPerimeter * (halfPerimeter - firstEdge) * (halfPerimeter - secondEdge)
+                        * (halfPerimeter - thirdEdge));
+        System.out.println("Perimeter(m): " + perimeter + "\nArea(m2): " + area);
     }
 }
